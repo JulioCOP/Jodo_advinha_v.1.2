@@ -1,0 +1,56 @@
+#Melhore o jogo do DESAFIO 28 onde o computador vai “pensar” em um número entre 0 e 10.
+# Só que agora o jogador vai tentar adivinhar até acertar, mostrando no final quantos
+# palpites foram necessários para vencer.
+
+from random import randint
+from time import sleep
+
+print("{} SERÀ QUE VOCÊ CONSEGUE ME VENCER ? {}".format('\033[1:36m', '\033[m'))
+sleep(2)
+print("Vou pensar em um número, tente adivinhar ? ")
+computador= randint(0,5)
+print("{}.".format('\033[1;33m'), end="")
+sleep(0.5)
+print("{}.".format('\033[1;33m'), end="")
+sleep(0.5)
+print("{}.".format('\033[1;33m'), end="")
+sleep(0.5)
+print("{}.".format('\033[1;33m'), end="")
+sleep(0.5)
+print("{}.".format('\033[1;33m'), end="")
+sleep(0.5)
+print("{}.".format('\033[1;33m'), end="")
+sleep(0.5)
+print("{}.".format('\033[1;33m'), end="")
+sleep(0.5)
+n=int(input("\nDigite um número entre 0 e 5: ").format('\033[1m;30','\033[m'))
+while n!=computador:
+    print("{} VOCÊ ERROU {}. ".format('\033[1;31;40m', '\033[m'))
+    sleep(1)
+    print("{}TENTE NOVAMENTE!{}" .format('\033[1m','\033[m'))
+    sleep(0.75)
+    n=int(input("{}Lembre-se do intervalo e digite novamente um número:{} " .format('\033[1;34m','\033[m')))
+    sleep(2)
+    print("Estou pensando em um número")
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(0.5)
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(0.5)
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(0.5)
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(0.5)
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(0.5)
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(0.5)
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(0.5)
+    print("{}.".format('\033[1;33m'), end="")
+    sleep(1)
+    computador = randint(0, 5)
+    sleep(1)
+if n==computador:
+    print("\n{}Parabéns você {} {} ACERTOU {}".format('\033[1m', '\033[m', '\033[1;30;42m', '\033[m'))
+else:
+    print("\nVocê {}ERROU.{}".format('\033[1;31m', '\033[m'))
